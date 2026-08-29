@@ -21,6 +21,8 @@ import { ChangelogPage, changelogHeadings } from '@/content/pages/changelog'
 import { ContributingPage, contributingHeadings } from '@/content/pages/contributing'
 import { NotFoundPage } from './NotFoundPage'
 import type { TocHeading } from '@/hooks/useActiveHeading'
+import { environmentsHeadings, EnvironmentsPage } from '@/content/pages/environments'
+import { gitHeadings, GitPage } from '@/content/pages/git-features'
 
 type DocDef = {
   title: string
@@ -85,6 +87,21 @@ const docs: Record<string, DocDef> = {
       'Contribute to Fishman open source — app development setup, docs PRs, and community guidelines for the Tauri + React API IDE.',
     headings: contributingHeadings,
     Page: ContributingPage,
+  },
+  environments: {
+    title: 'Fishman Environments',
+    description:
+      'Manage API variables and switch between local, staging, and production configurations in Fishman.',
+    headings: environmentsHeadings,
+    Page: EnvironmentsPage,
+  },
+  
+  git: {
+    title: 'Git Integration in Fishman',
+    description:
+      'Manage Git repositories inside Fishman with branches, changes, diffs, commits, history, remote sync, and merge conflict resolution.',
+    headings: gitHeadings,
+    Page: GitPage,
   },
 }
 
